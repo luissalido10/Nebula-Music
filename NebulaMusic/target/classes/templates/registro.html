@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nébula Music - Registro</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+<main class="auth-container">
+    <section class="auth-card">
+        <form class="auth-form" method="post" action="/crear-cuenta" enctype="application/x-www-form-urlencoded">
+            <h2>Crear Cuenta</h2>
+
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="ej. Luis Salido" required minlength="10">
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="luis@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label type="contrasenia">Contraseña</label>
+                <input type="password" id="contrasenia" name="contrasenia" placeholder="Minimo 8 caracteres" required>
+            </div>
+
+            <div class="form-group">
+                <label type="txt_pseudonimo">Pseudonimo</label>
+                <input type="text"
+                       id="txt_pseudonimo"
+                       name="txt_pseudonimo"
+                       required
+                       placeholder="Nebula-2025">
+            </div>
+
+            <div class="form-group">
+                <label>Genero:</label>
+                <div class="radio-group">
+                    <input type="radio" id="rad_femenino" name="rad_genero" value="femenino" required>
+                    <label for="rad_femenino">Femenino</label>
+                    <input type="radio" id="rad_masculino" name="rad_genero" value="masculino">
+                    <label for="rad_masculino">Masculino</label>
+                    <input type="radio" id="rad_otro" name="rad_genero" value="otro">
+                    <label for="rad_otro">Otro</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sel_suscripcion">Tipo Suscripción:</label>
+                <select id="sel_suscripcion" name="sel_suscripcion" required>
+                    <option value="">--Selecciona una Opción--</option>
+                    <option value="gratis">Gratis</option>
+                    <option value="premium_mensual">Premium Mensual ($99/mes)</option>
+                    <option value="premium_anual">Premium Anual ($899/mes)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha Nacimiento</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Cuentanos que música te gusta">
+                    </textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="terminos" name="chk_terminos" value="aceptado" required>
+                <label>Acepto Terminos y Condiciones</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Crear una Cuenta</button>
+                <button type="reset">Limpiar el Formulario</button>
+            </div>
+
+        </form>
+        <p>Ya tienes una cuenta?</p><a href="iniciar-sesion.html">Iniciar Sesion</a>
+    </section>
+</main>
+
+<footer>
+    <p>Copyright Nébula 2025.</p>
+</footer>
+
+</body>
+</html>
